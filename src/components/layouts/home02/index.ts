@@ -8,7 +8,8 @@ import Review from './Review';
 import Author from './Author';
 import Cta from './Cta';
 import Contact from './Contact';
-import Footer from './Footer'
+import Footer from './Footer';
+import Pricing from './Pricing';
 
 export {Header, Banner,Chapter, About, Features, Feature2,Cta,Review,Author,
-    Contact,Footer}
+    Contact,Footer, Pricing}

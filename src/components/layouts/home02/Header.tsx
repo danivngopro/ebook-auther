@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import links from "../links";
 import menus from "../menus2";
 
-function Header() {
+function Header({ handleScroll }: { handleScroll: any }) {
   return (
     <header>
       <div className="site-navigation main_menu" id="mainmenu-area">
@@ -30,38 +29,14 @@ function Header() {
 
             <div className="collapse navbar-collapse" id="navbarMenu">
               <ul className="navbar-nav mr-auto">
-                <li className="nav-item dropdown">
-                  <Link
-                    to="#"
-                    className="nav-link dropdown-toggle"
-                    id="navbar2"
-                    role="button"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Home <i className="fa fa-angle-down"></i>
-                  </Link>
-                  <ul className="dropdown-menu">
-                    {links.map((data) => (
-                      <Link
-                        className="dropdown-item"
-                        to={data.tolink}
-                        onClick={() => {
-                          window.location.href = data.tolink;
-                        }}
-                      >
-                        {data.namelink}
-                      </Link>
-                    ))}
-                  </ul>
-                </li>
-
                 {menus.map((menu) => (
                   <li className="nav-item " key={menu.id}>
                     <Link
                       to={menu.tomenu}
                       className="nav-link js-scroll-trigger"
+                      onClick={() => {
+                        handleScroll(menu.id);
+                      }}
                     >
                       {menu.namemenu}
                     </Link>

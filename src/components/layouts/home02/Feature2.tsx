@@ -39,8 +39,8 @@ function Feature2() {
           </div>
         </div>
         <div className="row ">
-          {state.feature.map((data) => (
-            <div className="col-lg-4 col-md-6">
+          {state.feature.map((data, index) => (
+            <div className="col-lg-4 col-md-6" key={index}>
               <div className="feature-style-2 mb-4 mb-lg-0" key={data.id}>
                 <i className={data.icon}></i>
                 <div className="feature-text">

@@ -1,5 +1,10 @@
 const menus = [
     {
+        id: 0,
+        tomenu: "#top-header",
+        namemenu: "Home"
+    },
+    {
         id: 1,
         tomenu: "#about",
         namemenu: "About"
@@ -7,17 +12,17 @@ const menus = [
     {
         id: 2,
         tomenu: "#chapters",
-        namemenu: "chapters"
+        namemenu: "Chapters"
     },
     {
         id: 3,
         tomenu: "#testimonial",
-        namemenu: "testimonial"
+        namemenu: "Testimonial"
     },
     {
         id: 4,
         tomenu: "#author",
-        namemenu: "author"
+        namemenu: "Author"
     },
     {
         id: 5,
