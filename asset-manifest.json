@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/EBOOK-AUTHER/static/css/main.e6c13ad2.css",
-    "main.js": "/EBOOK-AUTHER/static/js/main.2a0cd9ea.js",
-    "index.html": "/EBOOK-AUTHER/index.html",
-    "main.e6c13ad2.css.map": "/EBOOK-AUTHER/static/css/main.e6c13ad2.css.map",
-    "main.2a0cd9ea.js.map": "/EBOOK-AUTHER/static/js/main.2a0cd9ea.js.map"
+    "main.css": "/ebook-auther/static/css/main.e6c13ad2.css",
+    "main.js": "/ebook-auther/static/js/main.2a0cd9ea.js",
+    "index.html": "/ebook-auther/index.html",
+    "main.e6c13ad2.css.map": "/ebook-auther/static/css/main.e6c13ad2.css.map",
+    "main.2a0cd9ea.js.map": "/ebook-auther/static/js/main.2a0cd9ea.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
