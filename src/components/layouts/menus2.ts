@@ -26,6 +26,11 @@ const menus = [
     },
     {
         id: 5,
+        tomenu: "#pricing",
+        namemenu: "Pricing"
+    },
+    {
+        id: 6,
         tomenu: "#contact",
         namemenu: "Contact"
     },

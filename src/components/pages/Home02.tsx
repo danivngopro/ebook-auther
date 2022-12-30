@@ -23,9 +23,11 @@ function HomePage() {
     useRef<HTMLDivElement | null>(null),
     useRef<HTMLDivElement | null>(null),
     useRef<HTMLDivElement | null>(null),
+    useRef<HTMLDivElement | null>(null),
   ];
 
   const handleScroll = (menuName: number) => {
+    console.log(menuName)
     refs[menuName].current?.scrollIntoView({
       behavior: "smooth",
       block: "start",
@@ -54,11 +56,13 @@ function HomePage() {
         <Author />
       </div>
       <Cta />
-      <Pricing />
       <div ref={refs[5]}>
+        <Pricing />
+      </div>
+      <div ref={refs[6]}>
         <Contact />
       </div>
-      <Footer />
+      <Footer handleScroll={handleScroll}/>
     </div>
   );
 }

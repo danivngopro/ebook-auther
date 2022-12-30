@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Footer() {
+function Footer({ handleScroll }: { handleScroll: any }) {
   return (
     <section className="footer pt-120">
       <div className="container">
@@ -61,7 +61,7 @@ function Footer() {
                   @ 2021-Copyright reserved to BooHunt.Proudly Crafted by{" "}
                   <Link to="https://themeforest.net/user/dreambuzz">
                     Dreambuzz
-                  </Link>{" "}
+                  </Link>
                 </p>
               </div>
             </div>
@@ -70,9 +70,15 @@ function Footer() {
       </div>
 
       <div className="fixed-btm-top">
-        <a href="#top-header" className="js-scroll-trigger scroll-to-top">
+        <Link
+          to="#top-header"
+          className="js-scroll-trigger scroll-to-top"
+          onClick={() => {
+            handleScroll(0);
+          }}
+        >
           <i className="fa fa-angle-up"></i>
-        </a>
+        </Link>
       </div>
     </section>
   );
