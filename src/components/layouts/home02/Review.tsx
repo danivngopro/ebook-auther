@@ -1,55 +1,192 @@
 import React from "react";
-import ReviewCarousel from "./ReviewCarousel";
+import ReviewCardsCarousel from "./review component/ReviewCardsCarousel";
 
 export default function Review() {
-  const state = [
+  const reviewCards = [
     {
-      image: "./assets/images/clients/test-1.jpg",
-      quoteText: "Very Effective!",
+      quoteText: "This is the best product I've ever used!",
       text:
-        "They are creative enough.Very much creative and powerful enough.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "I've been using this product for a month now and I am extremely satisfied with it. It has completely transformed my skin and I am seeing visible results. Highly recommend!",
+      name: "Jane Doe",
+      designation: "Skincare enthusiast",
+      image: "/images/jane-doe.jpg",
+    },
+    {
+      quoteText: "I am in love with this product!",
+      text:
+        "I've been using this product for a few weeks now and I am amazed by the results. My hair is so much softer and healthier. I will definitely be repurchasing!",
       name: "John Doe",
-      designation: "Developer",
+      designation: "Haircare enthusiast",
+      image: "/images/john-doe.jpg",
     },
     {
-      image: "./assets/images/clients/test-2.jpg",
-      quoteText: "Very Effective!",
+      quoteText: "This product has exceeded my expectations!",
       text:
-        "They are creative enough.Very much creative and powerful enough.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      name: "John Doe2",
-      designation: "Developer",
+        "I was a bit skeptical about trying this product, but I am so glad I did. It has exceeded all of my expectations and I can't wait to see the long term results. Highly recommend!",
+      name: "Jessica Doe",
+      designation: "Wellness enthusiast",
+      image: "/images/jessica-doe.jpg",
+    },{
+      quoteText: "This is the best product I've ever used!",
+      text:
+        "I've been using this product for a month now and I am extremely satisfied with it. It has completely transformed my skin and I am seeing visible results. Highly recommend!",
+      name: "Jane Doe",
+      designation: "Skincare enthusiast",
+      image: "/images/jane-doe.jpg",
     },
     {
-      image: "./assets/images/clients/test-1.jpg",
-      quoteText: "Very Effective!",
+      quoteText: "I am in love with this product!",
       text:
-        "They are creative enough.Very much creative and powerful enough.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "I've been using this product for a few weeks now and I am amazed by the results. My hair is so much softer and healthier. I will definitely be repurchasing!",
       name: "John Doe",
-      designation: "Developer",
+      designation: "Haircare enthusiast",
+      image: "/images/john-doe.jpg",
     },
     {
-      image: "./assets/images/clients/test-2.jpg",
-      quoteText: "Very Effective!",
+      quoteText: "This product has exceeded my expectations!",
       text:
-        "They are creative enough.Very much creative and powerful enough.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      name: "John Doe2",
-      designation: "Developer",
+        "I was a bit skeptical about trying this product, but I am so glad I did. It has exceeded all of my expectations and I can't wait to see the long term results. Highly recommend!",
+      name: "Jessica Doe",
+      designation: "Wellness enthusiast",
+      image: "/images/jessica-doe.jpg",
+    },{
+      quoteText: "This is the best product I've ever used!",
+      text:
+        "I've been using this product for a month now and I am extremely satisfied with it. It has completely transformed my skin and I am seeing visible results. Highly recommend!",
+      name: "Jane Doe",
+      designation: "Skincare enthusiast",
+      image: "/images/jane-doe.jpg",
     },
     {
-      image: "./assets/images/clients/test-1.jpg",
-      quoteText: "Very Effective!",
+      quoteText: "I am in love with this product!",
       text:
-        "They are creative enough.Very much creative and powerful enough.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "I've been using this product for a few weeks now and I am amazed by the results. My hair is so much softer and healthier. I will definitely be repurchasing!",
       name: "John Doe",
-      designation: "Developer",
+      designation: "Haircare enthusiast",
+      image: "/images/john-doe.jpg",
     },
     {
-      image: "./assets/images/clients/test-2.jpg",
-      quoteText: "Very Effective!",
+      quoteText: "This product has exceeded my expectations!",
       text:
-        "They are creative enough.Very much creative and powerful enough.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      name: "John Doe2",
-      designation: "Developer",
+        "I was a bit skeptical about trying this product, but I am so glad I did. It has exceeded all of my expectations and I can't wait to see the long term results. Highly recommend!",
+      name: "Jessica Doe",
+      designation: "Wellness enthusiast",
+      image: "/images/jessica-doe.jpg",
+    },{
+      quoteText: "This is the best product I've ever used!",
+      text:
+        "I've been using this product for a month now and I am extremely satisfied with it. It has completely transformed my skin and I am seeing visible results. Highly recommend!",
+      name: "Jane Doe",
+      designation: "Skincare enthusiast",
+      image: "/images/jane-doe.jpg",
+    },
+    {
+      quoteText: "I am in love with this product!",
+      text:
+        "I've been using this product for a few weeks now and I am amazed by the results. My hair is so much softer and healthier. I will definitely be repurchasing!",
+      name: "John Doe",
+      designation: "Haircare enthusiast",
+      image: "/images/john-doe.jpg",
+    },
+    {
+      quoteText: "This product has exceeded my expectations!",
+      text:
+        "I was a bit skeptical about trying this product, but I am so glad I did. It has exceeded all of my expectations and I can't wait to see the long term results. Highly recommend!",
+      name: "Jessica Doe",
+      designation: "Wellness enthusiast",
+      image: "/images/jessica-doe.jpg",
+    },{
+      quoteText: "This is the best product I've ever used!",
+      text:
+        "I've been using this product for a month now and I am extremely satisfied with it. It has completely transformed my skin and I am seeing visible results. Highly recommend!",
+      name: "Jane Doe",
+      designation: "Skincare enthusiast",
+      image: "/images/jane-doe.jpg",
+    },
+    {
+      quoteText: "I am in love with this product!",
+      text:
+        "I've been using this product for a few weeks now and I am amazed by the results. My hair is so much softer and healthier. I will definitely be repurchasing!",
+      name: "John Doe",
+      designation: "Haircare enthusiast",
+      image: "/images/john-doe.jpg",
+    },
+    {
+      quoteText: "This product has exceeded my expectations!",
+      text:
+        "I was a bit skeptical about trying this product, but I am so glad I did. It has exceeded all of my expectations and I can't wait to see the long term results. Highly recommend!",
+      name: "Jessica Doe",
+      designation: "Wellness enthusiast",
+      image: "/images/jessica-doe.jpg",
+    },{
+      quoteText: "This is the best product I've ever used!",
+      text:
+        "I've been using this product for a month now and I am extremely satisfied with it. It has completely transformed my skin and I am seeing visible results. Highly recommend!",
+      name: "Jane Doe",
+      designation: "Skincare enthusiast",
+      image: "/images/jane-doe.jpg",
+    },
+    {
+      quoteText: "I am in love with this product!",
+      text:
+        "I've been using this product for a few weeks now and I am amazed by the results. My hair is so much softer and healthier. I will definitely be repurchasing!",
+      name: "John Doe",
+      designation: "Haircare enthusiast",
+      image: "/images/john-doe.jpg",
+    },
+    {
+      quoteText: "This product has exceeded my expectations!",
+      text:
+        "I was a bit skeptical about trying this product, but I am so glad I did. It has exceeded all of my expectations and I can't wait to see the long term results. Highly recommend!",
+      name: "Jessica Doe",
+      designation: "Wellness enthusiast",
+      image: "/images/jessica-doe.jpg",
+    },{
+      quoteText: "This is the best product I've ever used!",
+      text:
+        "I've been using this product for a month now and I am extremely satisfied with it. It has completely transformed my skin and I am seeing visible results. Highly recommend!",
+      name: "Jane Doe",
+      designation: "Skincare enthusiast",
+      image: "/images/jane-doe.jpg",
+    },
+    {
+      quoteText: "I am in love with this product!",
+      text:
+        "I've been using this product for a few weeks now and I am amazed by the results. My hair is so much softer and healthier. I will definitely be repurchasing!",
+      name: "John Doe",
+      designation: "Haircare enthusiast",
+      image: "/images/john-doe.jpg",
+    },
+    {
+      quoteText: "This product has exceeded my expectations!",
+      text:
+        "I was a bit skeptical about trying this product, but I am so glad I did. It has exceeded all of my expectations and I can't wait to see the long term results. Highly recommend!",
+      name: "Jessica Doe",
+      designation: "Wellness enthusiast",
+      image: "/images/jessica-doe.jpg",
+    },{
+      quoteText: "This is the best product I've ever used!",
+      text:
+        "I've been using this product for a month now and I am extremely satisfied with it. It has completely transformed my skin and I am seeing visible results. Highly recommend!",
+      name: "Jane Doe",
+      designation: "Skincare enthusiast",
+      image: "/images/jane-doe.jpg",
+    },
+    {
+      quoteText: "I am in love with this product!",
+      text:
+        "I've been using this product for a few weeks now and I am amazed by the results. My hair is so much softer and healthier. I will definitely be repurchasing!",
+      name: "John Doe",
+      designation: "Haircare enthusiast",
+      image: "/images/john-doe.jpg",
+    },
+    {
+      quoteText: "This product has exceeded my expectations!",
+      text:
+        "I was a bit skeptical about trying this product, but I am so glad I did. It has exceeded all of my expectations and I can't wait to see the long term results. Highly recommend!",
+      name: "Jessica Doe",
+      designation: "Wellness enthusiast",
+      image: "/images/jessica-doe.jpg",
     },
   ];
 
@@ -103,39 +240,7 @@ export default function Review() {
         <div className="row justify-content-center">
           <div className="col-lg-12">
             <div className="testimonials-slides">
-              <ReviewCarousel items={state} />
-              <h1>asdf</h1>
-              {/* <Carousel>
-                {state.testimonial.map((data) => (
-                  <div className={data.className} key={data.id}>
-                    <div className="client-info">
-                      <div className="rating">
-                        <i className="fa fa-star"></i>
-                        <i className="fa fa-star"></i>
-                        <i className="fa fa-star"></i>
-                        <i className="fa fa-star"></i>
-                        <i className="fa fa-star"></i>
-                      </div>
-                      <h4>{data.quoteText}</h4>
-                      <p>{data.text}</p>
-                    </div>
-
-                    <div className="client-desc d-flex align-items-center">
-                      <div className="client-img">
-                        <img
-                          src={data.img}
-                          alt={data.alt}
-                          className="img-fluid"
-                        />
-                      </div>
-                      <div className="client-text">
-                        <h5>{data.name}</h5>
-                        <span className="designation">{data.designation}</span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </Carousel> */}
+              <ReviewCardsCarousel reviewCards={reviewCards} />
             </div>
           </div>
         </div>
