@@ -1,53 +1,86 @@
 import React from "react";
+import ReviewCarousel from "./ReviewCarousel";
+
 export default function Review() {
-  const state = {
-    testimonial: [
-      {
-        id: 1,
-        img: "./assets/images/clients/test-1.jpg",
-        alt: "images",
-        quoteText: "Very Effective!",
-        text:
-          "They are creative enough.Very much creative and powerful enough.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        name: "John Doe",
-        desigantion: "Developer",
-        classname: "review-item",
-      },
-      {
-        id: 2,
-        img: "./assets/images/clients/test-2.jpg",
-        alt: "images",
-        quoteText: "Very Effective!",
-        text:
-          "They are creative enough.Very much creative and powerful enough.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        name: "John Doe2",
-        desigantion: "Developer",
-        classname: "review-item",
-      },
-      {
-        id: 3,
-        img: "./assets/images/clients/test-3.jpg",
-        alt: "images",
-        quoteText: "Very Effective!",
-        text:
-          "They are creative enough.Very much creative and powerful enough.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        name: "John Doe3",
-        desigantion: "Developer",
-        classname: "review-item",
-      },
-      {
-        id: 4,
-        img: "./assets/images/clients/test-2.jpg",
-        alt: "images",
-        quoteText: "Very Effective!",
-        text:
-          "They are creative enough.Very much creative and powerful enough.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        name: "John Doe2",
-        desigantion: "Developer",
-        classname: "review-item",
-      },
-    ],
-  };
+  const state = [
+    {
+      image: "./assets/images/clients/test-1.jpg",
+      quoteText: "Very Effective!",
+      text:
+        "They are creative enough.Very much creative and powerful enough.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      name: "John Doe",
+      designation: "Developer",
+    },
+    {
+      image: "./assets/images/clients/test-2.jpg",
+      quoteText: "Very Effective!",
+      text:
+        "They are creative enough.Very much creative and powerful enough.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      name: "John Doe2",
+      designation: "Developer",
+    },
+    {
+      image: "./assets/images/clients/test-1.jpg",
+      quoteText: "Very Effective!",
+      text:
+        "They are creative enough.Very much creative and powerful enough.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      name: "John Doe",
+      designation: "Developer",
+    },
+    {
+      image: "./assets/images/clients/test-2.jpg",
+      quoteText: "Very Effective!",
+      text:
+        "They are creative enough.Very much creative and powerful enough.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      name: "John Doe2",
+      designation: "Developer",
+    },
+    {
+      image: "./assets/images/clients/test-1.jpg",
+      quoteText: "Very Effective!",
+      text:
+        "They are creative enough.Very much creative and powerful enough.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      name: "John Doe",
+      designation: "Developer",
+    },
+    {
+      image: "./assets/images/clients/test-2.jpg",
+      quoteText: "Very Effective!",
+      text:
+        "They are creative enough.Very much creative and powerful enough.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      name: "John Doe2",
+      designation: "Developer",
+    },
+  ];
+
+  // const options = {
+  //   loop: true,
+  //   nav: false,
+  //   dots: true,
+  //   margin: 10,
+  //   center: true,
+  //   autoplayHoverPause: true,
+  //   autoplay: true,
+  //   autoplayTimeout: 6000,
+  //   responsiveclassName: true,
+  //   responsive: {
+  //     0: {
+  //       items: 1,
+  //     },
+  //     576: {
+  //       items: 1,
+  //     },
+  //     768: {
+  //       items: 1,
+  //     },
+  //     1000: {
+  //       items: 1,
+  //     },
+  //     1200: {
+  //       items: 3,
+  //     },
+  //   },
+  // };
 
   return (
     <section
@@ -70,35 +103,39 @@ export default function Review() {
         <div className="row justify-content-center">
           <div className="col-lg-12">
             <div className="testimonials-slides">
-              {state.testimonial.map((data) => (
-                <div className={data.classname} key={data.id}>
-                  <div className="client-info">
-                    <div className="rating">
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
+              <ReviewCarousel items={state} />
+              <h1>asdf</h1>
+              {/* <Carousel>
+                {state.testimonial.map((data) => (
+                  <div className={data.className} key={data.id}>
+                    <div className="client-info">
+                      <div className="rating">
+                        <i className="fa fa-star"></i>
+                        <i className="fa fa-star"></i>
+                        <i className="fa fa-star"></i>
+                        <i className="fa fa-star"></i>
+                        <i className="fa fa-star"></i>
+                      </div>
+                      <h4>{data.quoteText}</h4>
+                      <p>{data.text}</p>
                     </div>
-                    <h4>{data.quoteText}</h4>
-                    <p>{data.text}</p>
-                  </div>
 
-                  <div className="client-desc d-flex align-items-center">
-                    <div className="client-img">
-                      <img
-                        src={data.img}
-                        alt={data.alt}
-                        className="img-fluid"
-                      />
-                    </div>
-                    <div className="client-text">
-                      <h5>{data.name}</h5>
-                      <span className="designation">{data.desigantion}</span>
+                    <div className="client-desc d-flex align-items-center">
+                      <div className="client-img">
+                        <img
+                          src={data.img}
+                          alt={data.alt}
+                          className="img-fluid"
+                        />
+                      </div>
+                      <div className="client-text">
+                        <h5>{data.name}</h5>
+                        <span className="designation">{data.designation}</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </Carousel> */}
             </div>
           </div>
         </div>

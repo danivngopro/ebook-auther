@@ -10,11 +10,6 @@ const menus = [
         namemenu: "About"
     },
     {
-        id: 2,
-        tomenu: "#chapters",
-        namemenu: "Chapters"
-    },
-    {
         id: 3,
         tomenu: "#testimonial",
         namemenu: "Testimonial"

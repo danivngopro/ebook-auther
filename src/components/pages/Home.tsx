@@ -3,7 +3,6 @@ import { useRef } from "react";
 import {
   Header,
   Banner,
-  Chapter,
   About,
   Features,
   Feature2,
@@ -27,7 +26,7 @@ function HomePage() {
   ];
 
   const handleScroll = (menuName: number) => {
-    console.log(menuName)
+    console.log(menuName);
     refs[menuName].current?.scrollIntoView({
       behavior: "smooth",
       block: "start",
@@ -45,24 +44,21 @@ function HomePage() {
       <div ref={refs[1]}>
         <About />
       </div>
-      <div ref={refs[2]}>
-        <Chapter />
-      </div>
       <Features />
-      <div ref={refs[3]}>
+      <div ref={refs[2]}>
         <Review />
       </div>
-      <div ref={refs[4]}>
+      <div ref={refs[3]}>
         <Author />
       </div>
       <Cta />
-      <div ref={refs[5]}>
+      <div ref={refs[4]}>
         <Pricing />
       </div>
-      <div ref={refs[6]}>
+      <div ref={refs[5]}>
         <Contact />
       </div>
-      <Footer handleScroll={handleScroll}/>
+      <Footer handleScroll={handleScroll} />
     </div>
   );
 }
