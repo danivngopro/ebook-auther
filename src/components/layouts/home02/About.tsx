@@ -34,7 +34,7 @@ function About() {
           <div className="col-lg-6 col-md-6">
             <div className="about-img">
               <img
-                src="assets/images/banner/book.png"
+                src={process.env.PUBLIC_URL + "/assets/images/banner/book.png"}
                 alt=""
                 className="img-fluid"
               />

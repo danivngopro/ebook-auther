@@ -1,6 +1,18 @@
 import React from "react";
 import { useRef } from "react";
-import { Header, Footer } from "../layouts/home02/index";
+import {
+  Header,
+  Banner,
+  About,
+  Features,
+  Feature2,
+  Cta,
+  Review,
+  Author,
+  Contact,
+  Footer,
+  Pricing,
+} from "../layouts/home02/index";
 
 function HomePage() {
   const refs = [
@@ -14,7 +26,6 @@ function HomePage() {
   ];
 
   const handleScroll = (menuName: number) => {
-    console.log(menuName);
     refs[menuName].current?.scrollIntoView({
       behavior: "smooth",
       block: "start",
@@ -27,9 +38,25 @@ function HomePage() {
       <div ref={refs[0]}>
         <Header handleScroll={handleScroll} />
       </div>
-
-      <div>body</div>
-
+      <Banner />
+      <Feature2 />
+      <div ref={refs[1]}>
+        <About />
+      </div>
+      <Features />
+      <div ref={refs[2]}>
+        <Review />
+      </div>
+      <div ref={refs[3]}>
+        <Author />
+      </div>
+      <Cta />
+      <div ref={refs[4]}>
+        <Pricing />
+      </div>
+      <div ref={refs[5]}>
+        <Contact />
+      </div>
       <Footer handleScroll={handleScroll} />
     </div>
   );

@@ -39,7 +39,7 @@ function Author() {
           <div className="col-lg-5 col-md-6">
             <div className="auhtor-img mb-4 mb-lg-0">
               <img
-                src="assets/images/bg/author.jpg"
+                src={process.env.PUBLIC_URL + "/assets/images/bg/author.jpg"}
                 alt=""
                 className="img-fluid"
               />

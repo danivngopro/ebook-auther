@@ -33,7 +33,7 @@ function Banner() {
           <div className="col-lg-6">
             <div className="banner-img pr-3">
               <img
-                src="assets/images/banner/book-2.png"
+                src={process.env.PUBLIC_URL + "/assets/images/banner/book-2.png"}
                 alt=""
                 className="img-fluid"
               />

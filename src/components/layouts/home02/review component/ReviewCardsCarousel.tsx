@@ -55,9 +55,8 @@ export default function ReviewCardsCarousel({ reviewCards }: CarouselProps) {
     <div style={{ width: "100%" }}>
       <Slider {...settings}>
         {reviewCards.map((reviewCard, index) => (
-          <div>
+          <div key={index}>
             <ReviewCard
-              key={index}
               quoteText={reviewCard.quoteText}
               text={reviewCard.text}
               name={reviewCard.name}

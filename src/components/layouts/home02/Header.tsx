@@ -10,7 +10,7 @@ function Header({ handleScroll }: { handleScroll: any }) {
           <div className="container">
             <Link to="/" className="navbar-brand">
               <img
-                src="assets/images/logo-dark.png"
+                src={process.env.PUBLIC_URL + "/assets/images/logo-dark.png"}
                 alt="Bookhunt"
                 className="img-fluid"
               />
