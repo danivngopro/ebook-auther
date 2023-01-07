@@ -5,10 +5,12 @@ import HomePage from "./components/pages/Home";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/Book/:id" element={<Book />} />
-    </Routes>
+    <div style={{ backgroundColor: '#f7f7f8' }}>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/Book/:id" element={<Book />} />
+      </Routes>
+    </div>
   );
 }
 

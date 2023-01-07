@@ -9,7 +9,9 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <div style={{ backgroundColor: "#f7f7f8" }}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </div>
 );

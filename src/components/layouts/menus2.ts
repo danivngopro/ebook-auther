@@ -10,22 +10,22 @@ const menus = [
         namemenu: "About"
     },
     {
-        id: 3,
+        id: 2,
         tomenu: "#testimonial",
         namemenu: "Testimonial"
     },
     {
-        id: 4,
+        id: 3,
         tomenu: "#author",
         namemenu: "Author"
     },
     {
-        id: 5,
+        id: 4,
         tomenu: "#pricing",
         namemenu: "Pricing"
     },
     {
-        id: 6,
+        id: 5,
         tomenu: "#contact",
         namemenu: "Contact"
     },

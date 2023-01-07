@@ -5,7 +5,7 @@ import menus from "../menus2";
 function Header({ handleScroll }: { handleScroll: any }) {
   return (
     <header>
-      <div className="site-navigation main_menu" id="mainmenu-area">
+      <div className="site-navigation main_menu bg-white" id="mainmenu-area">
         <nav className="navbar navbar-expand-lg">
           <div className="container">
             <Link to="/" className="navbar-brand">

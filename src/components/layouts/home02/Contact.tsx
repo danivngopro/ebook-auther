@@ -3,8 +3,8 @@ import React from "react";
 
 function Contact() {
   return (
-    <section className="section-padding contact bg-white" id="contact">
-      <div className="container">
+    <section className="section-padding contact" id="contact">
+      <div className="container bg-white p-2 rounded shadow">
         <div className="row justify-content-center">
           <div className="col-lg-8">
             <div className="section-heading center-heading text-center mb-60">
