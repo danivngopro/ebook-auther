@@ -12,7 +12,7 @@ import {
   Contact,
   Footer,
   Pricing,
-} from "../layouts/home02/index";
+} from "./components/index";
 
 function HomePage() {
   const refs = [

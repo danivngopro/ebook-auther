@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import menus from "../menus2";
+import menus from "../../../components/menus2";
 
 function Header({ handleScroll }: { handleScroll: any }) {
   return (

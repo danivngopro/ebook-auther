@@ -1,6 +1,7 @@
 import React from "react";
 import { useRef } from "react";
-import { Header, Footer } from "../layouts/home02/index";
+import Footer from "../../components/form/Footer";
+import Header from "./components/Header";
 
 function HomePage() {
   const refs = [
